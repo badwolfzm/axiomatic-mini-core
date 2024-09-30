@@ -1,5 +1,5 @@
 {
-    "name": "axiomatic-mini-core",
+    "name": "gaming/axiomatic-mini-core",
     "autoload": {
         "psr-4": {
             "Core\\": "src/"

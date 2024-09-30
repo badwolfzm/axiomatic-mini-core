@@ -23,7 +23,10 @@ class ComposerStaticInit72913d2d33b435c4529c5db2eee48b3c
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
-            'Gaming\\AxiomaticMiniCore\\' => 25,
+        ),
+        'C' => 
+        array (
+            'Core\\' => 5,
         ),
     );
 
@@ -49,7 +52,7 @@ class ComposerStaticInit72913d2d33b435c4529c5db2eee48b3c
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'Gaming\\AxiomaticMiniCore\\' => 
+        'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
