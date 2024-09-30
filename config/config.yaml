@@ -20,7 +20,6 @@ plugins:
 
 logging:
   level: INFO
-  format: json 
   path: /logs/app.log
 
 cache:
@@ -33,7 +32,7 @@ security:
     - user
   permissions:
     admin:
-      - EmailService: *
-      - SMSService: *
+      - EmailService: "*"
+      - SMSService: "*"
     user:
-      - EmailService: send
+      - EmailService: "send"

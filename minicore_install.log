@@ -284,3 +284,14 @@
 2024-09-30 19:28:43,432 - INFO - Docker Compose file created.
 2024-09-30 19:30:23,556 - INFO - Containers started successfully.
 2024-09-30 19:30:23,556 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
+2024-09-30 19:32:22,436 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 19:32:22,436 - INFO - Checking and installing dependencies...
+2024-09-30 19:32:22,507 - INFO - docker.io already installed.
+2024-09-30 19:32:22,565 - INFO - docker-compose already installed.
+2024-09-30 19:32:22,672 - INFO - kubelet kubeadm kubectl already installed.
+2024-09-30 19:32:22,675 - ERROR - Error checking redis-server: [WinError 2] The system cannot find the file specified
+2024-09-30 19:32:22,676 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 19:32:25,454 - INFO - Cloned mini-core repository into c:/minicore.
+2024-09-30 19:32:25,454 - INFO - Docker Compose file created.
+2024-09-30 19:33:27,930 - INFO - Containers started successfully.
+2024-09-30 19:33:27,930 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
