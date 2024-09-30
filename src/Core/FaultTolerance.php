@@ -3,6 +3,14 @@
 namespace Core;
 
 class FaultTolerance {
+    private $logger;
+    private $executor;
+
+    public function __construct($executor, $logger) {
+        $this->executor = $executor;
+        $this->logger = $logger;
+    }
+
     public function executeWithRetry($service, $action, $input, $retries = 3) {
         for ($i = 0; $i < $retries; $i++) {
             try {
@@ -10,13 +18,13 @@ class FaultTolerance {
             } catch (\Exception $e) {
                 $this->logFailure($e, $service, $action);
                 if ($i === $retries - 1) {
-                    throw $e;
+                    throw $e; // Rethrow after final retry
                 }
             }
         }
     }
 
     private function logFailure($e, $service, $action) {
-        // Log failure to a file or service
+        $this->logger->log("Failed to execute $action in $service after retry: " . $e->getMessage(), 'WARNING');
     }
 }

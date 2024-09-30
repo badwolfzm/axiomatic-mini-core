@@ -1,11 +1,5 @@
 <?php
 
-// Enable error reporting for development
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-echo "Hello, World!"; // Your existing code
-
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../src/Core/Autoloader.php';
 
@@ -19,6 +13,7 @@ use Core\FaultTolerance;
 use Core\EventDispatcher;
 use Core\ParallelExecutor;
 use Core\Security;
+use Core\Validator; // Include the validator
 
 Autoloader::register();
 
@@ -47,9 +42,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);
     $workflow = $input['workflow'];
 
-    if ($security->validateAccess($input['user'], $workflow['service'], $workflow['action'])) {
-        $orchestrator->executeWorkflow($workflow, $input);
-    } else {
-        echo json_encode(['error' => 'Access denied']);
+    try {
+        // Validate input fields
+        Validator::validateInput($input, ['user', 'workflow']);
+        
+        // Ensure security access
+        if ($security->validateAccess($input['user'], $workflow['service'], $workflow['action'])) {
+            $orchestrator->executeWorkflow($workflow, $input);
+        } else {
+            echo json_encode(['error' => 'Access denied']);
+        }
+    } catch (\Exception $e) {
+        echo json_encode(['error' => $e->getMessage()]);
+        error_log("Input validation or security check failed: " . $e->getMessage());
     }
 }
