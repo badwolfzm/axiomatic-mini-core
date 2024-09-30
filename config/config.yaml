@@ -1,5 +1,3 @@
-# config/config.yaml
-
 services:
   - name: EmailService
     class: Services\EmailService
