@@ -20,7 +20,7 @@ plugins:
 
 logging:
   level: INFO
-  format: json # Added JSON format for structured logging
+  format: json 
   path: /logs/app.log
 
 cache:
