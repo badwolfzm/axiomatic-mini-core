@@ -16,14 +16,14 @@ RUN a2enmod rewrite
 # Set the ServerName to suppress warning
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-# Create a basic Apache configuration to allow access to the /var/www/html/public directory
+# Allow access to the public directory in the main configuration
 RUN echo '<Directory "/var/www/html/public">\n\
     Options Indexes FollowSymLinks\n\
     AllowOverride All\n\
     Require all granted\n\
 </Directory>\n' > /etc/apache2/conf-available/docker.conf
 
-# Enable the new Apache configuration
+# Enable the new configuration
 RUN a2enconf docker
 
 # Install PHP extensions if necessary

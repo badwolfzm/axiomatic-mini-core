@@ -1,0 +1,15 @@
+{
+    "name": "gaming/axiomatic-mini-core",
+    "autoload": {
+        "psr-4": {
+            "Gaming\\AxiomaticMiniCore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "badwolfzm",
+            "email": "shahaf0502937740@gmail.com"
+        }
+    ],
+    "require": {}
+}
