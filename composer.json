@@ -11,5 +11,10 @@
             "email": "shahaf0502937740@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "symfony/yaml": "^5.0"
+    }
+
 }
