@@ -2,28 +2,16 @@
 FROM php:8.0-apache
 
 # Set the working directory inside the container
-WORKDIR /var/www/html/public
+WORKDIR /var/www/html
 
-# Copy the entire application to the container's /var/www/html directory
+# Copy your PHP application files to the container
 COPY . /var/www/html
 
-# Set ownership and permissions
-RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+# Ensure that Apache has the right permissions to serve the content
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 755 /var/www/html
 
-# Enable Apache modules for rewrite and other features
-RUN a2enmod rewrite
-
-# Ensure Apache allows .htaccess override
-RUN echo '<Directory "/var/www/html/public">\n\
-    Options Indexes FollowSymLinks\n\
-    AllowOverride All\n\
-    Require all granted\n\
-</Directory>\n' > /etc/apache2/conf-available/docker.conf
-
-# Enable the new configuration
-RUN a2enconf docker
-
-# Install PHP extensions if necessary
+# Install any dependencies if needed (e.g., extensions)
 RUN docker-php-ext-install pdo pdo_mysql
 
 # Expose port 80 for the web server
