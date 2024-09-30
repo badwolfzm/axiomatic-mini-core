@@ -42,7 +42,7 @@ $executor = new Executor($serviceRegistry);
 $orchestrator = new Orchestrator($executor, $logger); // Pass both Executor and Logger
 
 $parallelExecutor = new ParallelExecutor();
-$faultTolerance = new FaultTolerance($executor);
+$faultTolerance = new FaultTolerance($executor, $logger); // Pass both Executor and Logger here too
 $eventDispatcher = new EventDispatcher($orchestrator);
 $security = new Security($config);
 
