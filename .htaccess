@@ -1,7 +1,14 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    # Ensure that the file or directory exists, otherwise forward to index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
+
+# Allow access to all
+<Directory "/var/www/html/public">
+    Require all granted
+</Directory>
