@@ -99,3 +99,25 @@
 2024-09-30 18:28:44,154 - INFO - Docker Compose file created.
 2024-09-30 18:29:06,100 - INFO - Containers started successfully.
 2024-09-30 18:29:06,100 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
+2024-09-30 18:35:12,043 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:35:12,043 - INFO - Checking and installing dependencies...
+2024-09-30 18:35:12,114 - INFO - docker.io already installed.
+2024-09-30 18:35:12,180 - INFO - docker-compose already installed.
+2024-09-30 18:35:12,296 - INFO - kubelet kubeadm kubectl already installed.
+2024-09-30 18:35:12,307 - ERROR - Error checking redis-server: [WinError 2] The system cannot find the file specified
+2024-09-30 18:35:12,307 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:35:16,873 - INFO - Cloned mini-core repository into c:/minicore.
+2024-09-30 18:35:16,873 - INFO - Docker Compose file created.
+2024-09-30 18:35:41,100 - INFO - Containers started successfully.
+2024-09-30 18:35:41,100 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
+2024-09-30 18:37:14,562 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:37:14,562 - INFO - Checking and installing dependencies...
+2024-09-30 18:37:14,613 - INFO - docker.io already installed.
+2024-09-30 18:37:14,670 - INFO - docker-compose already installed.
+2024-09-30 18:37:14,774 - INFO - kubelet kubeadm kubectl already installed.
+2024-09-30 18:37:14,780 - ERROR - Error checking redis-server: [WinError 2] The system cannot find the file specified
+2024-09-30 18:37:14,780 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:37:17,572 - INFO - Cloned mini-core repository into c:/minicore.
+2024-09-30 18:37:17,572 - INFO - Docker Compose file created.
+2024-09-30 18:37:40,291 - INFO - Containers started successfully.
+2024-09-30 18:37:40,291 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
