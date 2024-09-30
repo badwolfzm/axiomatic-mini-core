@@ -2,16 +2,31 @@
 FROM php:8.0-apache
 
 # Set the working directory inside the container
-WORKDIR /var/www/html
+WORKDIR /var/www/html/public
 
-# Copy your PHP application files to the container
+# Copy your entire application to the container's /var/www/html directory
 COPY . /var/www/html
 
-# Ensure that Apache has the right permissions to serve the content
-RUN chown -R www-data:www-data /var/www/html
-RUN chmod -R 755 /var/www/html
+# Ensure Apache has the correct permissions
+RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
-# Install any dependencies if needed (e.g., extensions)
+# Enable Apache modules
+RUN a2enmod rewrite
+
+# Set the ServerName to suppress warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Create a basic Apache configuration to allow access to the /var/www/html/public directory
+RUN echo '<Directory "/var/www/html/public">\n\
+    Options Indexes FollowSymLinks\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>\n' > /etc/apache2/conf-available/docker.conf
+
+# Enable the new Apache configuration
+RUN a2enconf docker
+
+# Install PHP extensions if necessary
 RUN docker-php-ext-install pdo pdo_mysql
 
 # Expose port 80 for the web server
