@@ -1,0 +1,40 @@
+# config/config.yaml
+
+services:
+  - name: EmailService
+    class: Services\EmailService
+    config:
+      smtp_host: smtp.mailtrap.io
+      smtp_port: 2525
+      username: your_username
+      password: your_password
+      from_email: no-reply@example.com
+
+  - name: SMSService
+    class: Services\SMSService
+    config:
+      api_key: your_sms_api_key
+      api_secret: your_sms_api_secret
+
+plugins:
+  - NotificationServicePlugin.yaml
+  - DataServicePlugin.yaml
+
+logging:
+  level: INFO
+  path: /logs/app.log
+
+cache:
+  host: redis
+  port: 6379
+
+security:
+  roles:
+    - admin
+    - user
+  permissions:
+    admin:
+      - EmailService: *
+      - SMSService: *
+    user:
+      - EmailService: send
