@@ -1,20 +1,20 @@
 # Use the official PHP image as the base
 FROM php:8.0-apache
 
-# Set the working directory inside the container
-WORKDIR /var/www/html
+# Set the working directory inside the container to the public directory
+WORKDIR /var/www/html/public
 
-# Copy your PHP application files to the container
+# Copy your entire application to the container's /var/www/html directory
 COPY . /var/www/html
 
-# Set ownership to Apache's user (www-data) and set correct permissions
+# Ensure Apache has the correct permissions
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
-# Enable Apache mod_rewrite and other necessary modules
+# Enable Apache mod_rewrite and necessary modules for framework routing
 RUN a2enmod rewrite
 
-# Create a basic Apache configuration to allow access to the /var/www/html directory
-RUN echo '<Directory "/var/www/html">\n\
+# Create a basic Apache configuration to allow access to the /var/www/html/public directory
+RUN echo '<Directory "/var/www/html/public">\n\
     Options Indexes FollowSymLinks\n\
     AllowOverride All\n\
     Require all granted\n\

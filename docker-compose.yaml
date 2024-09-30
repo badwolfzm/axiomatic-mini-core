@@ -4,11 +4,10 @@ services:
     image: "redis:alpine"
     ports:
       - "6379:6379"
-
   core_app:
     build: .
     volumes:
-      - .:/var/www/html  # This ensures your app files are copied to the container
+      - .:/var/www/html  # Mount your project to /var/www/html inside the container
     ports:
       - "80:80"
     depends_on:
