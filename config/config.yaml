@@ -20,7 +20,9 @@ plugins:
 
 logging:
   level: INFO
+  format: plain
   path: /logs/app.log
+
 
 cache:
   host: redis

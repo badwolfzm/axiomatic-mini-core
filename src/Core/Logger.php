@@ -8,9 +8,10 @@ class Logger {
     private $format;
 
     public function __construct($logConfig) {
-        $this->logPath = $logConfig['path'];
-        $this->logLevel = $logConfig['level'];
-        $this->format = $logConfig['format'];
+        // Set default values if the keys are missing
+        $this->logPath = $logConfig['path'] ?? '/logs/app.log'; // Default log path
+        $this->logLevel = $logConfig['level'] ?? 'INFO';         // Default log level
+        $this->format = $logConfig['format'] ?? 'plain';         // Default format (plain text if not provided)
     }
 
     public function log($message, $level = 'INFO') {

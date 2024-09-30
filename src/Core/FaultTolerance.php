@@ -3,10 +3,10 @@
 namespace Core;
 
 class FaultTolerance {
-    private $logger;
     private $executor;
+    private $logger;
 
-    public function __construct($executor, $logger) {
+    public function __construct(Executor $executor, Logger $logger) {
         $this->executor = $executor;
         $this->logger = $logger;
     }
