@@ -31,3 +31,49 @@
 2024-09-30 18:09:58,552 - INFO - Docker Compose file created.
 2024-09-30 18:10:22,061 - INFO - Containers started successfully.
 2024-09-30 18:10:22,061 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
+2024-09-30 18:17:53,844 - INFO - Deleting directory: c:/minicore
+2024-09-30 18:17:53,844 - INFO - Deleted file: c:/minicore\.git\hooks\applypatch-msg.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\commit-msg.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\fsmonitor-watchman.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\post-update.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-applypatch.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-commit.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-merge-commit.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-push.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-rebase.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\pre-receive.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\prepare-commit-msg.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\push-to-checkout.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\sendemail-validate.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\hooks\update.sample
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\info\exclude
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\logs\refs\heads\main
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\logs\refs\remotes\origin\HEAD
+2024-09-30 18:17:53,860 - INFO - Deleted directory: c:/minicore\.git\logs\refs\remotes\origin
+2024-09-30 18:17:53,860 - INFO - Deleted directory: c:/minicore\.git\logs\refs\heads
+2024-09-30 18:17:53,860 - INFO - Deleted directory: c:/minicore\.git\logs\refs\remotes
+2024-09-30 18:17:53,860 - INFO - Deleted file: c:/minicore\.git\logs\HEAD
+2024-09-30 18:17:53,860 - INFO - Deleted directory: c:/minicore\.git\logs\refs
+2024-09-30 18:17:53,860 - ERROR - Failed to delete the directory c:/minicore: [WinError 5] Access is denied: 'c:/minicore\\.git\\objects\\pack\\pack-be8be4258d64bf99ca3730714cebfb09eb1f1153.idx'
+2024-09-30 18:18:02,953 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:18:02,953 - INFO - Checking and installing dependencies...
+2024-09-30 18:18:03,003 - INFO - docker.io already installed.
+2024-09-30 18:18:03,053 - INFO - docker-compose already installed.
+2024-09-30 18:18:03,156 - INFO - kubelet kubeadm kubectl already installed.
+2024-09-30 18:18:03,156 - ERROR - Error checking redis-server: [WinError 2] The system cannot find the file specified
+2024-09-30 18:18:03,156 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:18:05,839 - INFO - Cloned mini-core repository into c:/minicore.
+2024-09-30 18:18:05,839 - INFO - Docker Compose file created.
+2024-09-30 18:18:28,146 - INFO - Containers started successfully.
+2024-09-30 18:18:28,146 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
+2024-09-30 18:20:05,329 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:20:05,345 - INFO - Checking and installing dependencies...
+2024-09-30 18:20:05,402 - INFO - docker.io already installed.
+2024-09-30 18:20:05,462 - INFO - docker-compose already installed.
+2024-09-30 18:20:05,556 - INFO - kubelet kubeadm kubectl already installed.
+2024-09-30 18:20:05,556 - ERROR - Error checking redis-server: [WinError 2] The system cannot find the file specified
+2024-09-30 18:20:05,556 - INFO - Directory c:/minicore does not exist. No need to delete.
+2024-09-30 18:20:08,227 - INFO - Cloned mini-core repository into c:/minicore.
+2024-09-30 18:20:08,227 - INFO - Docker Compose file created.
+2024-09-30 18:20:30,071 - INFO - Containers started successfully.
+2024-09-30 18:20:30,071 - INFO - Mini-core system installed, directory deleted, and Docker containers are up.
